@@ -1,0 +1,6 @@
+framework module Pods_admod {
+  umbrella header "Pods-admod-umbrella.h"
+
+  export *
+  module * { export * }
+}

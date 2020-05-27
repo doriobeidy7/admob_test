@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vI7-Ji-yHp">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5x4-nm-a6I">
+            <objects>
+                <viewController id="vI7-Ji-yHp" customClass="ViewController" customModule="admod" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="09i-o1-YDy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zej-3I-HE0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zBZ-Bi-9gc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BE-bq-8r4" customClass="GADBannerView">
+                                <rect key="frame" x="27.666666666666657" y="728" width="320" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="2Ga-1F-gzR"/>
+                                    <constraint firstAttribute="height" constant="50" id="pAY-py-y0Y"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aW-Me-LS7">
+                                <rect key="frame" x="136" y="127" width="49" height="30"/>
+                                <state key="normal" title="Banner"/>
+                                <connections>
+                                    <action selector="btn_banner:" destination="vI7-Ji-yHp" eventType="touchUpInside" id="YPC-yq-ICW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaN-i1-eeQ">
+                                <rect key="frame" x="134" y="203" width="69" height="30"/>
+                                <state key="normal" title="interstitial"/>
+                                <connections>
+                                    <action selector="ShowInterstitial:" destination="vI7-Ji-yHp" eventType="touchUpInside" id="OTr-7R-ChI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vf-XV-3Rf">
+                                <rect key="frame" x="136" y="264" width="65" height="30"/>
+                                <state key="normal" title="rewarded"/>
+                                <connections>
+                                    <action selector="ShowAdsRewardsWithSender:" destination="vI7-Ji-yHp" eventType="touchUpInside" id="b8f-WY-Kbx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0t-il-e0o">
+                                <rect key="frame" x="103" y="393" width="131" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="XBI-VN-I8I"/>
+                                    <constraint firstAttribute="width" constant="131" id="c3r-dI-hwr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8aW-Me-LS7" firstAttribute="leading" secondItem="1Vf-XV-3Rf" secondAttribute="leading" id="3TU-Li-SxT"/>
+                            <constraint firstItem="1Vf-XV-3Rf" firstAttribute="top" secondItem="VaN-i1-eeQ" secondAttribute="bottom" constant="31" id="3tQ-QZ-MJb"/>
+                            <constraint firstItem="r0t-il-e0o" firstAttribute="centerX" secondItem="1Vf-XV-3Rf" secondAttribute="centerX" id="Fkl-Rv-VB4"/>
+                            <constraint firstItem="VaN-i1-eeQ" firstAttribute="top" secondItem="8aW-Me-LS7" secondAttribute="bottom" constant="46" id="M2f-6N-CYk"/>
+                            <constraint firstItem="VaN-i1-eeQ" firstAttribute="centerX" secondItem="1Vf-XV-3Rf" secondAttribute="centerX" id="MUg-K7-9WP"/>
+                            <constraint firstItem="r0t-il-e0o" firstAttribute="leading" secondItem="zBZ-Bi-9gc" secondAttribute="leadingMargin" constant="87" id="YJj-Qh-aPX"/>
+                            <constraint firstItem="r0t-il-e0o" firstAttribute="top" secondItem="1Vf-XV-3Rf" secondAttribute="bottom" constant="99" id="clN-fb-uzP"/>
+                            <constraint firstItem="8aW-Me-LS7" firstAttribute="top" secondItem="09i-o1-YDy" secondAttribute="bottom" constant="83" id="doE-zu-GE0"/>
+                            <constraint firstItem="8BE-bq-8r4" firstAttribute="bottom" secondItem="Zej-3I-HE0" secondAttribute="top" id="edr-hV-rzB"/>
+                            <constraint firstAttribute="centerX" secondItem="8BE-bq-8r4" secondAttribute="centerX" id="ix7-1I-7Fe"/>
+                            <constraint firstItem="VaN-i1-eeQ" firstAttribute="leading" secondItem="zBZ-Bi-9gc" secondAttribute="leading" constant="134" id="pE8-FW-fNY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="8BE-bq-8r4" id="Z1W-IZ-blk"/>
+                        <outlet property="counter" destination="r0t-il-e0o" id="F0C-Cd-agJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oo-Rv-WN7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.80000000000001" y="271.92118226600985"/>
+        </scene>
+    </scenes>
+</document>
